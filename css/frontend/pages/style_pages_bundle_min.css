@@ -1,0 +1,271 @@
+:root {
+    --header-height : 15vh;
+    --footer-height: 10vh;
+    --mainmenu-height: 4vh;
+
+    --mainmenu-margin-top: 15vh;
+
+    --main-content-margin-top: calc(var(--hamburgerCross-position-top) + 50px + 5vh);
+
+    --hamburgerCross-position-top: calc((var(--header-height) + var(--mainmenu-height)) + 2vh);
+    --hamburgerCross-position-right: 3%;
+
+    --submenu-position-top: 20vh;
+    /* --submenu-position-left: 1vh; */
+    --submenu-height: calc(100vh - (var(--header-height) + var(--footer-height) + var(--mainmenu-height) + 1vh));
+    --submenu-width: 20%;
+
+    --noir-site: rgba(21,21,21,1.0);
+    --blanc-casse: antiquewhite;
+    --mainmenu-background-color: rgba(144, 110, 75, 1.0);
+    --submenu-background-color: rgba(144, 110, 75, 0.95);
+    --mainmenu-background-color-hover: rgba(21,21,21,0.9);;
+
+    --mainmenu-font-size: 1.3em;
+    --submenu-font-size: 1.2em;
+}
+
+@font-face {
+    font-family: 'ClementePDai Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('ClementePDai Regular'), url('/contents/fonts/clementepdaa/ClementePDai-Regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'ClementePDac ExtraLight';
+    font-style: normal;
+    font-weight: normal;
+    src: local('ClementePDac ExtraLight'), url('/contents/fonts/clementepdaa/ClementePDac-ExtraLight.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Dream Orphans';
+    src: url('/contents/fonts/dream_orphans/dream_orphans.ttf') format('ttf');
+}
+
+
+/*  ******************************************  Grands écrans   *********************************   */
+@media all and (min-width: 1500px){
+
+    body {
+        background-color: var(--noir-site);
+        color: var(--blanc-casse);
+        font-family: 'ClementePDac ExtraLight', sans-serif;
+    }
+
+    .pointer {
+        cursor: pointer;
+    }
+
+    /*  -------HEADER--------   */
+    header {
+        position: fixed;
+        z-index: 1000;
+        top: 0;
+        background-color: var(--noir-site);
+        height: var(--header-height);
+        width: 100%;
+    }
+
+    /*  -------MAIN MENU-----   */
+
+    #main_menu {
+        position: fixed;
+        z-index: 1000;
+        height: var(--mainmenu-height);
+        width: 100%;
+        top: var(--mainmenu-margin-top);
+        background-color: var(--mainmenu-background-color);
+        display: grid;
+    }
+
+    #main_menu ul {
+        margin: 0;
+        height: 100%;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(5, 10%);
+        -webkit-box-pack: center;
+                justify-content: center;
+    }
+
+    #main_menu ul li {
+        display: grid;
+        /* justify-content: center;
+        align-content: center; */
+        
+    }
+
+    #main_menu ul li a {
+        position: relative;
+        justify-self: stretch;
+        text-align: center;
+        text-decoration: none;
+        font-size: var(--mainmenu-font-size);
+        color: var(--noir-site);
+        -webkit-transition: color 0.5s ease-in-out;
+        transition: color 0.5s ease-in-out;
+    }
+
+    #main_menu ul li a::after {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        bottom: 0;
+        left: 0;
+        height: 0px;
+        width: 100%;
+        background-color: var(--mainmenu-background-color-hover);
+        -webkit-transition: height 0.25s ease-in-out;
+        transition: height 0.25s ease-in-out;
+    }
+
+    #main_menu ul li a:hover {
+        color: var(--blanc-casse);
+    }
+
+    #main_menu ul li a:hover::after {
+        height: 100%;
+    }
+
+
+    /*  --HAMBURGER & CROSS--    */
+    #hamburger {
+        position: fixed;
+        z-index: 1000;
+        height: 40px;
+        width: 50px;
+        top: var(--hamburgerCross-position-top);
+        right: var(--hamburgerCross-position-right);
+        cursor: pointer;
+    }
+
+    #hamburger {
+        display: grid;
+        -webkit-box-align: center;
+                align-items: center;
+    }
+
+    
+
+    #hamburger .line {
+        width: 100%;
+        height: 5px;
+        background-color: var(--blanc-casse);
+        border-radius: 2px;
+        -webkit-transform-origin: top left;
+                transform-origin: top left;
+        -webkit-transition: all 0.4s ease-in-out;
+        transition: all 0.4s ease-in-out;
+    }
+
+    .line:nth-child(1) {
+        align-self: start;
+    }
+
+    .line:nth-child(3) {
+        align-self: end;
+    }
+
+    #hamburger.cross .line:nth-child(2){
+        width: 0px;
+    }
+
+    #hamburger.cross .line:nth-child(1){
+        -webkit-transform: rotate(45deg) ;
+                transform: rotate(45deg) ;
+    }
+
+    #hamburger.cross .line:nth-child(3){
+        -webkit-transform: rotate(-45deg) ;
+                transform: rotate(-45deg) ;
+    }
+
+    /*  -------SUB MENU-----    */
+
+    #submenu {
+        position: fixed;
+        z-index: 1000;
+        top: var(--submenu-position-top);
+        left: calc(var(--submenu-width) * -1);
+        height: var(--submenu-height);
+        background-color: var(--submenu-background-color);
+        padding-right: 1%;
+        padding-left: 3%;
+        font-size: var(--submenu-font-size);
+        -webkit-transition: left 0.5s ease-in-out;
+        transition: left 0.5s ease-in-out;
+    }
+
+    #submenu.visible {
+        left: 2%;
+    }
+
+    #submenu ul {
+        padding: 0;
+        list-style-type: none;
+        height: 100%;
+        display: grid;
+        justify-items: end;
+    }
+
+    #submenu ul li {
+        display: grid;
+        -webkit-box-align: center;
+                align-items: center;
+    }
+
+    #submenu .pointer:hover {
+        color: rgb(161, 20, 20);
+    }
+
+
+    /*  -------MAIN--------     */
+    main {
+        /* background-color: darksalmon; */
+        position: relative;
+        width: 100%;
+        margin-top: var(--main-content-margin-top);
+        display: grid;
+        -webkit-box-pack: center;
+                justify-content: center;
+        grid-template-columns: 80%;
+    }
+
+    main article {
+        display: grid;
+        grid-row-gap: 30px;
+        text-align: center;
+    }
+
+    main article p {
+        text-align: justify;
+    }
+
+
+
+    /*  -------FOOTER------     */
+    footer {
+        background-color: darkslategrey;
+        position: absolute;
+        height: 10vh;
+        width: 100%;
+    }
+    
+}
+
+
+
+/*  ******************************************  Ecrans Moyens   *********************************   */
+@media all and (min-width: 920px) and (max-width: 1500px){
+
+}
+
+
+
+
+/*  ******************************************  Petits écrans   *********************************   */
+@media and (max-width: 919px){
+    
+}

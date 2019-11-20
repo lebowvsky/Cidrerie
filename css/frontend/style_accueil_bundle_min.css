@@ -1,0 +1,190 @@
+:root {
+
+    --header-height : 15vh;
+    --header-img-height : 8vh;
+    --carousel-height: 55vh;
+    --actualites-height: 30vh;
+    --menu-height: 85vh;
+    --footer-height: 10vh;
+
+    --body-background-color: rgba(21,21,21,1.0);
+    --body-color: rgb(222, 222,222);
+
+    --menu-font-size: 1.5em;
+
+
+
+
+
+}
+
+@font-face {
+    font-family: 'ClementePDai Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('ClementePDai Regular'), url('/contents/fonts/clementepdaa/ClementePDai-Regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'ClementePDac ExtraLight';
+    font-style: normal;
+    font-weight: normal;
+    src: local('ClementePDac ExtraLight'), url('/contents/fonts/clementepdaa/ClementePDac-ExtraLight.woff') format('woff');
+    }
+
+
+
+
+/*  ******************************************  Grands écrans   *********************************   */
+@media all and (min-width: 1500px){
+
+    body {
+        background-color: var(--body-background-color);
+        color: var(--body-color);
+        font-family: 'ClementePDac ExtraLight';
+    }
+
+    /*  -------HEADER---------   */
+    header {
+        position: fixed;
+        top: 0;
+        background: transparent;
+        display: grid;
+        height: var(--header-height);
+        width: 100%;
+        -webkit-box-pack: center;
+                justify-content: center;
+        align-content: center;
+    }
+
+    header img {
+        height: var(--header-img-height);
+    }
+
+
+    /*  -------CAROUSEL-------- */
+    #carousel_photo {
+        height: var(--carousel-height);
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: var(--header-height);
+    }
+
+    #carousel {
+        height: 100%;
+    }
+
+    #carousel .carousel-inner {
+        height: 100%;
+    }
+
+    .carousel-item {
+        height: 100%;
+        width: 100%
+    }
+
+    .carousel-item img {
+        width: 100%;
+        -o-object-fit: cover;
+           object-fit: cover;
+    }
+
+    /*  -------ACTUALITES----   */
+    #actualites {
+        width: 100%;
+        display: grid;
+        justify-content: space-around;
+        align-content: center;
+        grid-template-columns: 30% 30% 30%;
+        height: var(--actualites-height);
+        /* background-color: darkkhaki; */
+    }
+
+    .actualites_item {
+        align-self: stretch;
+        margin-top: 3vh;
+        /* border: 1px dashed black; */
+        text-align: justify;
+    }
+
+    /*  -------MENU----------   */
+    #menu {
+        height: var(--menu-height);
+        /* background-color: aquamarine; */
+    }
+
+    #menu ul {
+        height: 100%;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        display: grid;
+        -webkit-box-pack: center;
+                justify-content: center;
+        align-content: center;
+        grid-gap: 2vh 2vh;
+        grid-template-columns: 40% 40%;
+        grid-template-rows: 40% 40%;
+        /* background-color: lightpink; */
+    }
+
+    .menu_item {
+        /* background-color: bisque; */
+        list-style-type: none;
+    }
+
+    .menu_item a {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-rows: 60% 40%;
+        grid-template-columns: 100%;
+        text-align: center;
+        text-decoration: none;
+        color: var(--body-color);
+    }
+
+    .menu_item a img {
+        height: 100%;
+        justify-self: center;
+    }
+
+    .menu_item a span {
+        line-height: 100%;
+        font-size: 6em; 
+    }
+
+    .menu_item a p {
+        margin: 0;
+        align-self: center;
+        font-size: var(--menu-font-size);
+    }
+
+    /*  -------FOOTER--------   */
+    footer {
+        display: grid;
+        -webkit-box-pack: center;
+                justify-content: center;
+        align-content: center;
+        height: var(--footer-height);
+        background-color: black;
+        color: aliceblue;
+    }
+
+}
+
+
+
+/*  ******************************************  Ecrans Moyens   *********************************   */
+@media all and (min-width: 920px) and (max-width: 1500px){
+
+}
+
+
+
+
+/*  ******************************************  Petits écrans   *********************************   */
+@media and (max-width: 919px){
+
+}
