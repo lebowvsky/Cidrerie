@@ -15,6 +15,10 @@ try {
         if($_GET['action'] == 'pommes'){
             pommes();
         }
+
+        if($_GET['action'] == 'contact'){
+            contact();
+        }
     }
     else {
         accueil();

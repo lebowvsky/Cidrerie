@@ -60,7 +60,7 @@
             </li>
 
             <li class="menu_item">
-                <a href="#">
+                <a href="index.php?action=contact">
                     <img src="../contents/images/accueil/menu/envelope-of-white-paper.png" alt="enveloppe"/>
                     <p>Contact</p>
                 </a>

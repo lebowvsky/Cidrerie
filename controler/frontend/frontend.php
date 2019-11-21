@@ -7,3 +7,7 @@ function accueil(){
 function pommes(){
     require("view/frontend/pages/pommes/pommes_description.php");
 }
+
+function contact(){
+    require("view/frontend/pages/templates/template_contact.php");
+}
