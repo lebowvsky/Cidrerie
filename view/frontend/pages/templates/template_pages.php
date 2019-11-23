@@ -23,9 +23,9 @@
     <nav id="main_menu">
         <ul>
             <li><a href="/index.php?action=accueil">Accueil</a></li>
-            <li><a href="#">Pommes</a></li>
+            <li><a href="/index.php?action=pommes">Pommes</a></li>
             <li><a href="#">Moutons</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="/index.php?action=contact">Contact</a></li>
             <li><a href="#">Autour de nous</a></li>
         </ul>
     </nav>
