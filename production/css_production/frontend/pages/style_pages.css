@@ -17,6 +17,8 @@
     --submenu-height: calc(100vh - (var(--header-height) + var(--footer-height) + var(--mainmenu-height) + 1vh));
     --submenu-width: 20%;
 
+    --contact-height: 50vh;
+
     --noir-site: rgba(21,21,21,1.0);
     --blanc-casse: antiquewhite;
     --mainmenu-background-color: rgba(144, 110, 75, 1.0);
@@ -57,6 +59,11 @@
         background-color: var(--noir-site);
         color: var(--blanc-casse);
         font-family: 'ClementePDac ExtraLight', sans-serif;
+    }
+
+    a {
+        text-decoration: none;
+        color: var(--blanc-casse);
     }
 
     .pointer {
@@ -259,6 +266,78 @@
 
     main article p {
         text-align: justify;
+    }
+
+    /* CONTACT */
+
+    #contact {
+        place-self: center;
+        height: var(--contact-height);
+        font-size: 1.3em;
+        text-align: center;
+    }
+
+    #contact address {
+        display: grid;
+        grid-template-columns: 100%;
+        row-gap: 3vh;
+    }
+
+    #contact address iframe {
+        display: block;
+    }
+
+    #contact address a {
+        text-decoration: none;
+    }
+
+    #contact address a:hover {
+        color: var(--mainmenu-background-color);
+    }
+
+    #contact #map-link {
+        cursor: pointer;
+    }
+
+    #contact #map-link:hover {
+        color: var(--mainmenu-background-color);
+    }
+
+    #contact .fa-facebook {
+        margin-top: 3vh;
+    }
+
+    #contact #google-map-div.map-close {
+        position: fixed;
+        overflow: hidden;
+        top: 0;
+        left: 0;
+        
+        height: 0vh;
+        width: 100%;
+
+    }
+
+    #contact #google-map-div {
+        transition: height 0.5s ease-in-out;
+    }
+
+    #contact #google-map-div.map-open {
+        position: fixed;
+        overflow: hidden;
+        top: 0;
+        left: 0;
+        z-index: 1001;
+        height: 100vh;
+        width: 100%;
+        background-color: rgba(21,21,21,0.9);
+    }
+
+    #contact #google-map{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
 
 
