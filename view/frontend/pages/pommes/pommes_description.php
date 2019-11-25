@@ -4,7 +4,7 @@
     <article id="qui_sommes_nous" class="visible_article" class="article">
         <h2>Qui sommes-nous ?</h2>
         <section>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora suscipit vel quam, deserunt fugit assumenda molestias recusandae in, adipisci at asperiores commodi pariatur consequuntur mollitia nostrum et repudiandae consectetur culpa. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque dolorum perferendis, fugit, nam excepturi quidem facere praesentium id, ullam voluptas nobis explicabo eum odio corrupti consequuntur quam eaque. Minus, accusamus! Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore amet sequi totam quia quidem at blanditiis error quod doloremque exercitationem repudiandae ducimus, commodi dolore aliquam magni magnam aperiam nisi consequuntur. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum quis exercitationem tempora quae reiciendis temporibus! Nisi dicta nesciunt in! Est veniam numquam neque iure corporis fugit deleniti fuga asperiores itaque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit reiciendis excepturi modi totam, nostrum nesciunt aspernatur itaque quaerat voluptatibus, voluptas architecto alias tempore deleniti consequuntur, sequi vitae assumenda eligendi esse. Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, assumenda optio distinctio excepturi nulla iure deserunt adipisci exercitationem veritatis alias aliquid debitis nam explicabo commodi nihil deleniti ipsum mollitia similique. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum dolor, asperiores aut architecto reprehenderit pariatur non! Minus, praesentium iste aperiam pariatur ipsam dolore obcaecati veritatis dolorem omnis cumque ipsa reiciendis?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis itaque quasi nobis earum sunt. Delectus, blanditiis itaque, optio iusto culpa deleniti ea hic eveniet modi fugiat sit quod cum ipsa! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere quis quos atque! Quibusdam, dolorum! Magni, ut! Suscipit nihil pariatur ut consequuntur dolorum numquam debitis libero. Odio aut fuga possimus mollitia? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia delectus nemo cumque labore, laborum reiciendis repellendus assumenda mollitia, totam, vitae minus commodi id qui explicabo vero. Rerum natus sint omnis!</p>
         </section>
 
     </article>
@@ -12,7 +12,23 @@
     <article id="comment_travaillons_nous" class="article">
         <h2>Comment travaillons-nous</h2>
         <section>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus nisi ullam, ab, sint quis voluptate id obcaecati aut, ut magni adipisci ipsam neque mollitia porro dignissimos natus similique est aperiam.</p>
+            <div id="carousel" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active"> <img alt="" src="../contents/images/accueil/carousel/1.jpg"></div>
+                    <div class="carousel-item"> <img alt="" src="../contents/images/accueil/carousel/2.jpg"></div>
+                    <div class="carousel-item"> <img alt="" src="../contents/images/accueil/carousel/3.jpg"></div>
+                    <div class="carousel-item"> <img alt="" src="../contents/images/accueil/carousel/4.jpg"></div>
+                    <div class="carousel-item"> <img alt="" src="../contents/images/accueil/carousel/5.jpg"></div>
+                    <div class="carousel-item"> <img alt="" src="../contents/images/accueil/carousel/6.jpg"></div>
+                    <div class="carousel-item"> <img alt="" src="../contents/images/accueil/carousel/7.jpg"></div>
+                </div>
+                <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                </a>
+                <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                </a>
+            </div>
         </section>
     </article>
 
