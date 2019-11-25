@@ -12,7 +12,23 @@
     <article id="comment_travaillons_nous" class="article">
         <h2>Comment travaillons-nous</h2>
         <section>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus nisi ullam, ab, sint quis voluptate id obcaecati aut, ut magni adipisci ipsam neque mollitia porro dignissimos natus similique est aperiam.</p>
+            <div id="carousel" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active"> <img alt="" src="../contents/images/accueil/carousel/1.jpg"></div>
+                    <div class="carousel-item"> <img alt="" src="../contents/images/accueil/carousel/2.jpg"></div>
+                    <div class="carousel-item"> <img alt="" src="../contents/images/accueil/carousel/3.jpg"></div>
+                    <div class="carousel-item"> <img alt="" src="../contents/images/accueil/carousel/4.jpg"></div>
+                    <div class="carousel-item"> <img alt="" src="../contents/images/accueil/carousel/5.jpg"></div>
+                    <div class="carousel-item"> <img alt="" src="../contents/images/accueil/carousel/6.jpg"></div>
+                    <div class="carousel-item"> <img alt="" src="../contents/images/accueil/carousel/7.jpg"></div>
+                </div>
+                <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                </a>
+                <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                </a>
+            </div>
         </section>
     </article>
 
