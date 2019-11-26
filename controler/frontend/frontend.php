@@ -5,9 +5,9 @@ function accueil(){
 }
 
 function pommes(){
-    require("view/frontend/pages/pommes/pommes_description.php");
+    require("view/frontend/pages/pommes/pommes.php");
 }
 
 function contact(){
-    require("view/frontend/pages/templates/template_contact.php");
+    require("view/frontend/pages/contact/contact.php");
 }

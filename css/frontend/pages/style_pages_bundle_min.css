@@ -3,17 +3,24 @@
     --footer-height: 10vh;
     --mainmenu-height: 4vh;
 
-    --mainmenu-margin-top: 15vh;
+    --header-and-maimenu-height: calc(var(--header-height) + var(--mainmenu-height));
 
-    --main-content-margin-top: calc(var(--hamburgerCross-position-top) + 50px + 5vh);
+    --logo-height: 12vh;
+
+    --pages-first-article-height: calc(100vh - var(--header-and-maimenu-height));
+    --pages-article-height: calc(100vh - var(--header-and-maimenu-height));
+
+    --article-h2-margin-top: calc(var(--header-and-maimenu-height) + 3vh);
+    --mainmenu-margin-top: 15vh;
 
     --hamburgerCross-position-top: calc((var(--header-height) + var(--mainmenu-height)) + 2vh);
     --hamburgerCross-position-right: 3%;
 
     --submenu-position-top: 20vh;
-    /* --submenu-position-left: 1vh; */
     --submenu-height: calc(100vh - (var(--header-height) + var(--footer-height) + var(--mainmenu-height) + 1vh));
     --submenu-width: 20%;
+
+    --contact-height: 50vh;
 
     --noir-site: rgba(21,21,21,1.0);
     --blanc-casse: antiquewhite;
@@ -23,6 +30,9 @@
 
     --mainmenu-font-size: 1.3em;
     --submenu-font-size: 1.2em;
+    --h1-font-size: 1.8em;
+    --h2-font-size: 1.5em;
+    --h3-font-size: 1.3em;
 }
 
 @font-face {
@@ -54,6 +64,11 @@
         font-family: 'ClementePDac ExtraLight', sans-serif;
     }
 
+    a {
+        text-decoration: none;
+        color: var(--blanc-casse);
+    }
+
     .pointer {
         cursor: pointer;
     }
@@ -66,6 +81,29 @@
         background-color: var(--noir-site);
         height: var(--header-height);
         width: 100%;
+        display: grid;
+        grid-template-columns: 10% 90%;
+        align-content: center;
+        -webkit-box-align: center;
+                align-items: center;
+        justify-items: center;
+    }
+
+    #logo_and_title {
+        height: 100%;
+        width: 25%;
+        display: grid;
+        grid-template-columns: 30% 70%;
+        align-content: center;
+        -webkit-box-align: center;
+                align-items: center;
+        justify-items: center;
+        
+
+    }
+
+    #logo_and_title .logo {
+        height: var(--logo-height);
     }
 
     /*  -------MAIN MENU-----   */
@@ -226,11 +264,17 @@
         /* background-color: darksalmon; */
         position: relative;
         width: 100%;
-        margin-top: var(--main-content-margin-top);
         display: grid;
         -webkit-box-pack: center;
                 justify-content: center;
         grid-template-columns: 80%;
+        scroll-behavior: smooth;
+        height: 100vh;
+        overflow: scroll;
+        
+    }
+    main article {
+        display: none;
     }
 
     main article {
@@ -241,6 +285,123 @@
 
     main article p {
         text-align: justify;
+    }
+
+    .article {
+        height: 100vh;
+    }
+
+    .article h2 {
+        margin-top: var(--article-h2-margin-top);
+    }
+
+    /* QUI SOMMES NOUS */
+
+    #comment_travaillons_nous section {
+        display: grid;
+        grid-template-columns: 60%;
+        -webkit-box-pack: center;
+                justify-content: center;
+    }
+
+    #carousel {
+        width: 100%;
+        height: 60vh;
+        overflow: hidden;
+    }
+
+    .carousel-inner, .carousel-item {
+        height: 100%;
+    }
+
+    .carousel-item img {
+        min-width: 100%;
+        height: auto;
+    }
+
+    .carousel-caption {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        padding: 2%;
+        font-size: 1.2em;
+        margin-left: 0;
+        background-color: rgba(21,21,21, 0.6);
+    }
+    
+
+    /* CONTACT */
+
+    #contact {
+        place-self: center;
+        height: var(--contact-height);
+        font-size: 1.3em;
+        text-align: center;
+    }
+
+    #contact address {
+        display: grid;
+        grid-template-columns: 100%;
+        row-gap: 3vh;
+    }
+
+    #contact address iframe {
+        display: block;
+    }
+
+    #contact address a {
+        text-decoration: none;
+    }
+
+    #contact address a:hover {
+        color: var(--mainmenu-background-color);
+    }
+
+    #contact #map-link {
+        cursor: pointer;
+    }
+
+    #contact #map-link:hover {
+        color: var(--mainmenu-background-color);
+    }
+
+    #contact .fa-facebook {
+        margin-top: 3vh;
+    }
+
+    #contact #google-map-div.map-close {
+        position: fixed;
+        overflow: hidden;
+        top: 0;
+        left: 0;
+        
+        height: 0vh;
+        width: 100%;
+
+    }
+
+    #contact #google-map-div {
+        -webkit-transition: height 0.5s ease-in-out;
+        transition: height 0.5s ease-in-out;
+    }
+
+    #contact #google-map-div.map-open {
+        position: fixed;
+        overflow: hidden;
+        top: 0;
+        left: 0;
+        z-index: 1001;
+        height: 100vh;
+        width: 100%;
+        background-color: rgba(21,21,21,0.9);
+    }
+
+    #contact #google-map{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
     }
 
 

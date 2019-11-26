@@ -1,3 +1,24 @@
+<?php ob_start(); ?>
+    <img src="contents/images/nos_pommes/logo_pomme.png" alt="pomme" class="logo">
+<?php $logo = ob_get_clean(); ?>
+
+
+<?php ob_start(); ?>
+    <h1 id="title_page">Nos Pommes</h1>
+<?php $title_page = ob_get_clean(); ?>
+
+
+<?php ob_start(); ?>
+    <ul>
+        <li><a href="#qui_sommes_nous"><span class="pointer internal_link" data-article-id="qui_sommes_nous">Qui sommes-nous</span></a></li>
+        <li><a href="#comment_travaillons_nous"><span class="pointer internal_link" data-article-id="comment_travaillons_nous">Comment travaillons-nous</span></a></li>
+        <li><a href="#gamme_pommes"><span class="pointer internal_link" data-article-id="gamme_pommes">Gamme</span></a></li>
+        <li><a href="#visite"><span class="pointer internal_link" data-article-id="visite">Visite</span></a></li>
+        <li><a href="#infos"><span class="pointer internal_link" data-article-id="infos">Infos</span></a></li>
+    </ul>
+<?php $sub_menu = ob_get_clean(); ?>
+
+
 
 
 <?php ob_start(); ?>
@@ -17,6 +38,7 @@
                     <div class="carousel-item active">
                         <img alt="" src="../contents/images/accueil/carousel/1.jpg">
                         <div class="carousel-caption">
+                            <h3>Janvier</h3>
                             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Libero sint dolorem excepturi dolores eos adipisci! A tempora odio velit consectetur modi earum enim, facilis, dolorum adipisci, quibusdam quae ullam pariatur?</p>
                         </div>
                     </div>
@@ -24,20 +46,15 @@
                     <div class="carousel-item">
                         <img alt="" src="../contents/images/accueil/carousel/2.jpg">
                         <div class="carousel-caption">
+                            <h3>Mars</h3>
                             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis, veritatis! Distinctio tempore quaerat ipsum deleniti enim saepe eum alias, ipsa rerum laborum. Esse harum vero, adipisci repellendus ratione debitis animi!</p>
-                        </div>
-                    </div>
-
-                    <div class="carousel-item">
-                        <img alt="" src="../contents/images/accueil/carousel/3.jpg">
-                        <div class="carousel-caption">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex quisquam, impedit consectetur ipsa quibusdam.</p>
                         </div>
                     </div>
 
                     <div class="carousel-item">
                         <img alt="" src="../contents/images/accueil/carousel/4.jpg">
                         <div class="carousel-caption">
+                            <h3>Avril</h3>
                             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cupiditate ipsum nesciunt eum pariatur nostrum laboriosam fugit? Aliquid esse inventore corporis iste dolor quam adipisci nemo iusto delectus placeat, odio debitis?</p>
                         </div>
                     </div>
@@ -45,12 +62,14 @@
                     <div class="carousel-item">
                         <img alt="" src="../contents/images/accueil/carousel/5.jpg">
                         <div class="carousel-caption">
+                            <h3>Juin</h3>
                             <p>Rem possimus voluptatum laborum non explicabo? Accusantium, qui laboriosam. Assumenda, et autem? Enim dolor debitis, itaque ad eligendi id rerum modi voluptates!</p>
                         </div>
                     </div>
                     <div class="carousel-item">
                         <img alt="" src="../contents/images/accueil/carousel/6.jpg">
                         <div class="carousel-caption">
+                            <h3>Juillet</h3>
                             <p>Libero sint dolorem excepturi dolores eos adipisci!</p>
                         </div>
                     </div>
@@ -58,6 +77,7 @@
                     <div class="carousel-item">
                         <img alt="" src="../contents/images/accueil/carousel/7.jpg">
                         <div class="carousel-caption">
+                            <h3>Septembre</h3>
                             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Libero sint dolorem excepturi dolores eos adipisci! A tempora odio velit consectetur modi earum enim, facilis, dolorum adipisci, quibusdam quae ullam pariatur?</p>
                         </div>
                     </div>
@@ -97,7 +117,7 @@
 
 
 
-<?php require('view/frontend/pages/templates/template_pomme.php'); ?>
+
 <?php require('view/frontend/pages/templates/template_pages.php'); ?>
 
 
