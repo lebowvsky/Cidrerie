@@ -27,11 +27,11 @@ const articles = document.body.querySelectorAll('.article');
 
 subMenuItems.forEach(function(item){
     item.addEventListener("click", function(e){
-        const id = item.dataset.articleId;
+        /* const id = item.dataset.articleId;
         const article = document.body.querySelector("#" + id);
         const visible = document.body.querySelector(".visible_article");
         visible.classList.remove("visible_article");
-        article.classList.toggle("visible_article");
+        article.classList.toggle("visible_article"); */
         openSubMenu();
     })
 });

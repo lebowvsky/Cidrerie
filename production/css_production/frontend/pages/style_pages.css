@@ -3,21 +3,20 @@
     --footer-height: 10vh;
     --mainmenu-height: 4vh;
 
+    --header-and-maimenu-height: calc(var(--header-height) + var(--mainmenu-height));
+
     --logo-height: 12vh;
 
-    --pages-first-article-height: calc(100vh - var(--main-content-margin-top));
-    --pages-others-article-height: 100vh;
+    --pages-first-article-height: calc(100vh - var(--header-and-maimenu-height));
+    --pages-article-height: calc(100vh - var(--header-and-maimenu-height));
 
-    --article-h2-margin-top: calc(var(--main-content-margin-top) + 3vh);
+    --article-h2-margin-top: calc(var(--header-and-maimenu-height) + 3vh);
     --mainmenu-margin-top: 15vh;
-
-    --main-content-margin-top: calc(var(--header-height) + var(--mainmenu-height));
 
     --hamburgerCross-position-top: calc((var(--header-height) + var(--mainmenu-height)) + 2vh);
     --hamburgerCross-position-right: 3%;
 
     --submenu-position-top: 20vh;
-    /* --submenu-position-left: 1vh; */
     --submenu-height: calc(100vh - (var(--header-height) + var(--footer-height) + var(--mainmenu-height) + 1vh));
     --submenu-width: 20%;
 
@@ -253,10 +252,13 @@
         /* background-color: darksalmon; */
         position: relative;
         width: 100%;
-        margin-top: var(--main-content-margin-top);
         display: grid;
         justify-content: center;
         grid-template-columns: 80%;
+        scroll-behavior: smooth;
+        height: 100vh;
+        overflow: scroll;
+        
     }
     main article {
         display: none;
@@ -272,18 +274,28 @@
         text-align: justify;
     }
 
-    #comment_travaillons_nous, #gamme_pommes, #visite, #infos {
-        height: var(--pages-others-article-height);
+    .article {
+        height: 100vh;
     }
 
-    #comment_travaillons_nous h2, #gamme_pommes h2, #visite h2, #infos h2 {
+    .article h2 {
         margin-top: var(--article-h2-margin-top);
     }
 
     /* QUI SOMMES NOUS */
-    #qui_sommes_nous {
-        height: var(--pages-first-article-height);
+    #carousel {
+        height: 60vh;
+        overflow: hidden;
     }
+
+    .carousel-inner, .carousel-item {
+        height: 100%;
+    }
+
+    .carousel-item img {
+        height: 100%;
+    }
+    
 
     /* CONTACT */
 
