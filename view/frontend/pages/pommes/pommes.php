@@ -93,7 +93,7 @@
     </article>
 
     <article id="gamme_pommes" class="article">
-        <h2>Notre gamme de pommes</h2>
+        <h2>Notre gamme</h2>
         <section>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure eos perspiciatis blanditiis qui, repudiandae veniam, recusandae vero, exercitationem ex quidem quibusdam. Illo quo laborum, assumenda incidunt reprehenderit placeat fuga rem!</p>
         </section>
