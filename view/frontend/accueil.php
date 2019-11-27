@@ -12,7 +12,7 @@
 <body>
 
     <header>
-        <img src="../contents/images/accueil/logo/pomme.png" alt="logo pomme de la cidrerie"/>
+        <img src="../contents/images/accueil/logo/pomme.png" alt="logo de la cidrerie"/>
     </header>
 
     

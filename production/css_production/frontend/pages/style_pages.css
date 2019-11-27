@@ -5,10 +5,11 @@
 
     --logo-height: 12vh;
 
+    --articles-height: calc(100vh - var(--main-content-margin-top));
+
     --mainmenu-margin-top: 15vh;
 
     --main-content-margin-top: calc(var(--hamburgerCross-position-top) + 50px + 1vh);
-    --pages-first-article-height : calc(100vh - var(--main-content-margin-top));
 
     --hamburgerCross-position-top: calc((var(--header-height) + var(--mainmenu-height)) + 2vh);
     --hamburgerCross-position-right: 3%;
@@ -31,6 +32,7 @@
     --h1-font-size: 1.8em;
     --h2-font-size: 1.5em;
     --h3-font-size: 1.3em;
+    --carousel-caption-font-size: 1.1em;
 }
 
 @font-face {
@@ -256,12 +258,20 @@
         grid-template-columns: 80%;
     }
     main article {
-        display: none;
+        height: 0;
+        opacity: 0;
+        overflow: hidden;
+        transition: height 0.9s ease-in-out;
     }
 
     main article.visible_article {
         display: grid;
-        grid-row-gap: 30px;
+        /* grid-row-gap: 30px; */
+        grid-template-columns: 80%;
+        grid-template-rows: 10% 70%;
+        justify-content: center;
+        height: var(--articles-height);
+        opacity: 1;
         text-align: center;
     }
 
@@ -270,10 +280,40 @@
     }
 
     /* QUI SOMMES NOUS */
+
+
+    /* COMMENT TRAVAILLONS NOUS */
+    #carousel {
+        height: 100%;
+        width: 80%;
+        margin: auto;
+    }
+
+    .carousel-inner, .carousel-item {
+        height: 100%;
+    }
+
+    .carousel-item img {
+        min-width: 100%;
+    }
+
+    .carousel-caption {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        padding: 1% 2% 1% 2%;
+        background-color: rgba(21,21,21,0.5);
+    }
+
+    .carousel-caption p {
+        font-size: var(--carousel-caption-font-size);
+    }
+
+    /* NOTRE GAMME */
+
     
-    /* #qui_sommes_nous {
-        height: var(--pages-first-article-height);
-    } */
+    
 
     /* CONTACT */
 

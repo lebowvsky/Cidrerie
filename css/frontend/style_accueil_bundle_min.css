@@ -4,10 +4,11 @@
     --header-img-height : 8vh;
     --carousel-height: 55vh;
     --actualites-height: 30vh;
-    --menu-height: 85vh;
+    --menu-height: calc(100vh - (var(--header-height) + var(--footer-height)));
     --footer-height: 10vh;
 
-    --body-background-color: rgba(21,21,21,1.0);
+    
+    --noir-site: rgba(21,21,21,1.0);
     --body-color: rgb(222, 222,222);
 
     --menu-font-size: 1.5em;
@@ -39,7 +40,7 @@
 @media all and (min-width: 1500px){
 
     body {
-        background-color: var(--body-background-color);
+        background-color: var(--noir-site);
         color: var(--body-color);
         font-family: 'ClementePDac ExtraLight';
     }
@@ -47,14 +48,17 @@
     /*  -------HEADER---------   */
     header {
         position: fixed;
+        z-index: 1000;
         top: 0;
-        background: transparent;
-        display: grid;
+        background-color: var(--noir-site);
         height: var(--header-height);
         width: 100%;
-        -webkit-box-pack: center;
-                justify-content: center;
+        display: grid;
+        grid-template-columns: 10% 90%;
         align-content: center;
+        -webkit-box-align: center;
+                align-items: center;
+        justify-items: center;
     }
 
     header img {
