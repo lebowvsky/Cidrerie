@@ -53,7 +53,7 @@
             </li>
 
             <li class="menu_item">
-                <a href="#">
+                <a href="index.php?action=moutons">
                     <img src="../contents/images/accueil/menu/sheep-with-curly-wool.png" alt="image de mouton"/>
                     <p>Nos moutons</p>
                 </a>
