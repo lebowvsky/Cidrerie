@@ -275,9 +275,30 @@
         text-align: center;
     }
 
+    main #gamme_pommes.visible_article {
+        display: grid;
+        grid-template-columns: 80%;
+        grid-template-rows: 10% 10% 70%;
+        justify-content: center;
+        height: var(--articles-height);
+        opacity: 1;
+        text-align: center;
+    }
+
+    #sub_sub_menu ul {
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    #sub_sub_menu ul li {
+        list-style-type: none;
+    }
+
     main article p {
         text-align: justify;
     }
+
 
     /* QUI SOMMES NOUS */
 
@@ -312,7 +333,27 @@
 
     /* NOTRE GAMME */
 
-    
+    #sub_sub_menu li:hover {
+        color: rgb(161, 20, 20);
+    }
+
+    article .invisible_section {
+        display: none;
+    }
+
+    article .visible_section {
+        /* background-color: slategray; */
+        overflow: scroll;
+    }
+
+    .drink-item {
+        /* background-color: teal; */
+        display: grid;
+        height: 100%;
+        grid-template-columns: 35% 60%;
+        column-gap: 5%;
+        grid-template-rows: 100%;
+    }
     
 
     /* CONTACT */

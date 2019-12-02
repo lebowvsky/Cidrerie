@@ -8,7 +8,7 @@
 
 <?php ob_start(); ?>
     <ul>
-        <li><span class="pointer internal_link" data-article-id="qui_sommes_nous">Description</span></li>
+        <li><span class="pointer internal_link" data-article-id="description">Description</span></li>
         <li><span class="pointer internal_link" data-article-id="gamme_moutons">Gamme</span></li>
         <li><span class="pointer internal_link" data-article-id="visite">Visite</span></li>
         <li><span class="pointer internal_link" data-article-id="infos">Infos</span></li>
@@ -18,7 +18,7 @@
 
 
 <?php ob_start(); ?>
-    <article id="description" class="article">
+    <article id="description" class="visible_article" class="article">
         <h2>Description</h2>
         <section></section>
     </article>
@@ -34,7 +34,7 @@
         <h2>Info</h2>
         <section></section>
     </article>
-<? $content = ob_get_clean(); ?>
+<?php $content = ob_get_clean(); ?>
 
 
 <?php require('view/frontend/pages/templates/template_pages.php'); ?>

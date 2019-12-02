@@ -93,9 +93,48 @@
     </article>
 
     <article id="gamme_pommes" class="article">
-        <h2>Notre gamme de pommes</h2>
-        <section>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure eos perspiciatis blanditiis qui, repudiandae veniam, recusandae vero, exercitationem ex quidem quibusdam. Illo quo laborum, assumenda incidunt reprehenderit placeat fuga rem!</p>
+        <h2>Notre gamme</h2>
+        <div id="sub_sub_menu">
+            <ul>
+                <li><span class="pointer sub_internal_link" data-gamme-id="jus">Jus</span></li>
+                <li><span class="pointer sub_internal_link" data-gamme-id="cidre">Cidre</span></li>
+                <li><span class="pointer sub_internal_link" data-gamme-id="pommeau">Pommeau</span></li>
+                <li><span class="pointer sub_internal_link" data-gamme-id="fine">Fine</span></li>
+            </ul>
+        </div>
+        <section id="jus" class="section visible_section">
+            <h3>Jus</h3>
+            <div class="drink-item">
+                <img src="" alt="photo de jus">
+                <div class="item-text">
+                    <h4>Jus de pomme</h4>
+                    <p>Explication du nom. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus illum ab temporibus beatae aperiam consequatur enim veniam architecto? Saepe autem quo laboriosam voluptate vel doloribus ea quae hic sint quod.</p>
+                    <p>Description Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus aperiam nisi, exercitationem provident iure quae et, enim aliquid ducimus fugiat qui molestiae molestias velit pariatur reiciendis rem minima! Accusamus, quasi!</p>
+                    <p>Infos produit. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil provident explicabo optio atque asperiores corporis, ipsam, doloremque quae ab tenetur dolor! Doloribus molestias, porro vitae asperiores ducimus accusantium impedit laborum!</p>
+                </div>
+            </div>
+
+            <div class="drink-item">
+                <img src="" alt="photo de jus">
+                <div class="item-text">
+                    <h4>Autre jus de pomme</h4>
+                    <p>Explication du nom. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus illum ab temporibus beatae aperiam consequatur enim veniam architecto? Saepe autem quo laboriosam voluptate vel doloribus ea quae hic sint quod.</p>
+                    <p>Description Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus aperiam nisi, exercitationem provident iure quae et, enim aliquid ducimus fugiat qui molestiae molestias velit pariatur reiciendis rem minima! Accusamus, quasi!</p>
+                    <p>Infos produit. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil provident explicabo optio atque asperiores corporis, ipsam, doloremque quae ab tenetur dolor! Doloribus molestias, porro vitae asperiores ducimus accusantium impedit laborum!</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="cidre" class="section invisible_section">
+            <h3>Cidre</h3>  
+        </section>
+
+        <section id="pommeau" class="section invisible_section">
+            <h3>Pommeau</h3>
+        </section>
+
+        <section id="fine" class="section invisible_section">
+            <h3>Fine</h3>
         </section>
     </article>
 

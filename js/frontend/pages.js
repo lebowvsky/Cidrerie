@@ -37,6 +37,21 @@ subMenuItems.forEach(function(item){
 });
 
 
+/*  --------FONCTIONNEMENT SUB-SUBMENU----------     */
+const subSubMenuItems = document.body.querySelectorAll(".sub_internal_link");
+const sections = document.body.querySelectorAll(".section");
+
+subSubMenuItems.forEach(function(item){
+    item.addEventListener("click", function(e){
+        const id = item.dataset.gammeId;
+        const section = document.querySelector("#" + id);
+        const visible = document.body.querySelector(".visible_section");
+        visible.classList.replace("visible_section", "invisible_section");
+        section.classList.replace("invisible_section", "visible_section");
+    })
+});
+
+
 /*  --------FONCTIONNEMENT GOOGLE MAP-----------     */
 const mapDiv = document.body.querySelector('#google-map-div');
 const mapGoogle = document.body.querySelector("#google-map");
