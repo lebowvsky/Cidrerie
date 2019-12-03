@@ -9,7 +9,7 @@
 
     --mainmenu-margin-top: 15vh;
 
-    --main-content-margin-top: calc(var(--hamburgerCross-position-top) + 50px + 1vh);
+    --main-content-margin-top: calc(var(--hamburgerCross-position-top) + 1vh);
 
     --hamburgerCross-position-top: calc((var(--header-height) + var(--mainmenu-height)) + 2vh);
     --hamburgerCross-position-right: 3%;
@@ -25,10 +25,13 @@
     --blanc-casse: antiquewhite;
     --mainmenu-background-color: rgba(144, 110, 75, 1.0);
     --submenu-background-color: rgba(144, 110, 75, 0.95);
-    --mainmenu-background-color-hover: rgba(21,21,21,0.9);;
+    --sub-submenu-background-color: rgba(144, 110, 75, 0.5);
+    --mainmenu-background-color-hover: rgba(21,21,21,0.9);
+    --red-pointer-hover: rgb(161, 20, 20);
 
     --mainmenu-font-size: 1.3em;
     --submenu-font-size: 1.2em;
+    --sub-submenu-font-size: 1.1em;
     --h1-font-size: 1.8em;
     --h2-font-size: 1.5em;
     --h3-font-size: 1.3em;
@@ -243,7 +246,7 @@
     }
 
     #submenu .pointer:hover {
-        color: rgb(161, 20, 20);
+        color: var(--red-pointer-hover);
     }
 
 
@@ -266,33 +269,12 @@
 
     main article.visible_article {
         display: grid;
-        /* grid-row-gap: 30px; */
         grid-template-columns: 80%;
         grid-template-rows: 10% 70%;
         justify-content: center;
         height: var(--articles-height);
         opacity: 1;
         text-align: center;
-    }
-
-    main #gamme_pommes.visible_article {
-        display: grid;
-        grid-template-columns: 80%;
-        grid-template-rows: 10% 10% 70%;
-        justify-content: center;
-        height: var(--articles-height);
-        opacity: 1;
-        text-align: center;
-    }
-
-    #sub_sub_menu ul {
-        width: 100%;
-        display: flex;
-        justify-content: space-evenly;
-    }
-
-    #sub_sub_menu ul li {
-        list-style-type: none;
     }
 
     main article p {
@@ -333,30 +315,87 @@
 
     /* NOTRE GAMME */
 
+    .color-red {
+        color: var(--red-pointer-hover);
+    }
+
+    main #gamme_pommes.visible_article {
+        display: grid;
+        grid-template-columns: 80%;
+        grid-template-rows: 15% 5% 70%;
+        row-gap: 2%;
+        justify-content: center;
+        height: var(--articles-height);
+        opacity: 1;
+        text-align: center;
+    }
+
+    #sub_sub_menu ul {
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        background-color: var(--sub-submenu-background-color);
+        height: 100%;
+    }
+
+    #sub_sub_menu ul li {
+        list-style-type: none;
+        font-size: var(--sub-submenu-font-size);
+    }
+
     #sub_sub_menu li:hover {
-        color: rgb(161, 20, 20);
+        color: var(--red-pointer-hover);
+    }
+
+    article .visible_section {
+        overflow: scroll;
     }
 
     article .invisible_section {
         display: none;
     }
 
-    article .visible_section {
-        /* background-color: slategray; */
-        overflow: scroll;
-    }
-
     .drink-item {
-        /* background-color: teal; */
         display: grid;
         height: 100%;
         grid-template-columns: 35% 60%;
         column-gap: 5%;
         grid-template-rows: 100%;
     }
+
+    .drink-item img {
+        max-height: 100%;
+    }
+
+    .item-text {
+        display: grid;
+        grid-template-columns: 100%;
+        align-content: space-around;
+    }
+
+
+    /* VISITES */
+
+    #visites section {
+        display: grid;
+        grid-template-columns: 100%;
+        row-gap: 8vh;
+        overflow: scroll;
+    }
+
+    #logos-divers {
+        height: 10vh;
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    #logos-divers img {
+        max-height: 100%;
+    }
+
     
 
-    /* CONTACT */
+    /* ---------CONTACT--------- */
 
     #contact {
         place-self: center;

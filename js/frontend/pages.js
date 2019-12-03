@@ -46,8 +46,12 @@ subSubMenuItems.forEach(function(item){
         const id = item.dataset.gammeId;
         const section = document.querySelector("#" + id);
         const visible = document.body.querySelector(".visible_section");
+        const redItem = document.body.querySelector(".color-red");
         visible.classList.replace("visible_section", "invisible_section");
         section.classList.replace("invisible_section", "visible_section");
+        redItem.classList.remove("color-red");
+        item.classList.add("color-red");
+
     })
 });
 

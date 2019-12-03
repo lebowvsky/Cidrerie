@@ -12,7 +12,7 @@
         <li><span class="pointer internal_link" data-article-id="qui_sommes_nous">Qui sommes-nous</span></li>
         <li><span class="pointer internal_link" data-article-id="comment_travaillons_nous">Comment travaillons-nous</span></li>
         <li><span class="pointer internal_link" data-article-id="gamme_pommes">Gamme</span></li>
-        <li><span class="pointer internal_link" data-article-id="visite">Visite</span></li>
+        <li><span class="pointer internal_link" data-article-id="visites">Visites</span></li>
         <li><span class="pointer internal_link" data-article-id="infos">Infos</span></li>
     </ul>
 <?php $sub_menu = ob_get_clean(); ?>
@@ -96,16 +96,15 @@
         <h2>Notre gamme</h2>
         <div id="sub_sub_menu">
             <ul>
-                <li><span class="pointer sub_internal_link" data-gamme-id="jus">Jus</span></li>
+                <li><span class="pointer sub_internal_link color-red" data-gamme-id="jus">Jus</span></li>
                 <li><span class="pointer sub_internal_link" data-gamme-id="cidre">Cidre</span></li>
                 <li><span class="pointer sub_internal_link" data-gamme-id="pommeau">Pommeau</span></li>
                 <li><span class="pointer sub_internal_link" data-gamme-id="fine">Fine</span></li>
             </ul>
         </div>
         <section id="jus" class="section visible_section">
-            <h3>Jus</h3>
             <div class="drink-item">
-                <img src="" alt="photo de jus">
+                <img src="/contents/images/nos_pommes/gamme/8802810200094.png" alt="photo de jus">
                 <div class="item-text">
                     <h4>Jus de pomme</h4>
                     <p>Explication du nom. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus illum ab temporibus beatae aperiam consequatur enim veniam architecto? Saepe autem quo laboriosam voluptate vel doloribus ea quae hic sint quod.</p>
@@ -115,7 +114,7 @@
             </div>
 
             <div class="drink-item">
-                <img src="" alt="photo de jus">
+                <img src="/contents/images/nos_pommes/gamme/jusdepomme.png" alt="photo de jus">
                 <div class="item-text">
                     <h4>Autre jus de pomme</h4>
                     <p>Explication du nom. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus illum ab temporibus beatae aperiam consequatur enim veniam architecto? Saepe autem quo laboriosam voluptate vel doloribus ea quae hic sint quod.</p>
@@ -138,10 +137,29 @@
         </section>
     </article>
 
-    <article id="visite" class="article">
-        <h2>Visite</h2>
+    <article id="visites" class="article">
+        <h2>Visites</h2>
         <section>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur dicta provident odio voluptates autem iure laborum perspiciatis necessitatibus, molestiae amet voluptas blanditiis repudiandae dolores quae iusto sed omnis. Id, ab.</p>
+            <div id="deroulement-visites" class=".visites-item">
+                <h3>Déroulement des visites</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima incidunt, ea natus reprehenderit pariatur quia similique quo distinctio! Voluptatibus fuga nulla eveniet a culpa facilis, minus dolorum ea et eos.</p>
+            </div>
+
+            <div id="infos-pratiques" class=".visites-item">
+                <h3>Infos pratiques</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis qui facilis cumque est, consequuntur molestias praesentium illo perspiciatis, aliquam quisquam beatae, nemo iure? Delectus, deserunt cupiditate deleniti voluptas voluptatum odio!</p>
+            </div>
+
+            <div id="logos-divers" class=".visites-item">
+                <img src="contents/images/nos_pommes/visites/agri_bio.png" alt="A.B.">
+                <img src="contents/images/nos_pommes/visites/routard.png" alt="Guide du routard">
+                <img src="contents/images/nos_pommes/visites/lonely_planet.png" alt="Lonely Planet">
+            </div>
+
+            <div id="agenda" class=".visites-item">
+                <h3>Agenda</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga, culpa. Nulla, vel eius adipisci fuga eligendi sit nostrum eos eum aperiam ad earum, ab at dolore dignissimos nisi a culpa.</p>
+            </div>
         </section>
     </article>
 
