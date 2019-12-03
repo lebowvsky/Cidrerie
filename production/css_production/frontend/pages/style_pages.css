@@ -15,9 +15,14 @@
     --hamburgerCross-position-right: 3%;
 
     --submenu-position-top: 20vh;
-    /* --submenu-position-left: 1vh; */
+
     --submenu-height: calc(100vh - (var(--header-height) + var(--footer-height) + var(--mainmenu-height) + 1vh));
     --submenu-width: 20%;
+
+    --gamme_pommes-first-row-height: 5vh;
+    --gamme_pommes-second-row-height: 4vh;
+    --gamme_pommes-third-row-height: 66vh;
+    --gamme_pommes-row-gap: 1vh;
 
     --contact-height: 50vh;
 
@@ -31,7 +36,7 @@
 
     --mainmenu-font-size: 1.3em;
     --submenu-font-size: 1.2em;
-    --sub-submenu-font-size: 1.1em;
+    --sub-submenu-font-size: 1.3em;
     --h1-font-size: 1.8em;
     --h2-font-size: 1.5em;
     --h3-font-size: 1.3em;
@@ -270,11 +275,13 @@
     main article.visible_article {
         display: grid;
         grid-template-columns: 80%;
-        grid-template-rows: 10% 70%;
+        grid-template-rows: 5vh 70vh;
+        row-gap: 2vh;
         justify-content: center;
         height: var(--articles-height);
         opacity: 1;
         text-align: center;
+        overflow: scroll;
     }
 
     main article p {
@@ -322,8 +329,8 @@
     main #gamme_pommes.visible_article {
         display: grid;
         grid-template-columns: 80%;
-        grid-template-rows: 15% 5% 70%;
-        row-gap: 2%;
+        grid-template-rows: var(--gamme_pommes-first-row-height) var(--gamme_pommes-second-row-height) var(--gamme_pommes-third-row-height);
+        row-gap: var(--gamme_pommes-row-gap);
         justify-content: center;
         height: var(--articles-height);
         opacity: 1;
@@ -341,6 +348,10 @@
     #sub_sub_menu ul li {
         list-style-type: none;
         font-size: var(--sub-submenu-font-size);
+    }
+
+    #sub_sub_menu ul li span {
+        line-height: var(--gamme_pommes-second-row-height);
     }
 
     #sub_sub_menu li:hover {
@@ -365,6 +376,7 @@
 
     .drink-item img {
         max-height: 100%;
+        min-height: 100%;
     }
 
     .item-text {
