@@ -37,10 +37,12 @@
     --mainmenu-font-size: 1.3em;
     --submenu-font-size: 1.2em;
     --sub-submenu-font-size: 1.3em;
-    --h1-font-size: 1.8em;
+    --h1-font-size: 3.2em;
     --h2-font-size: 1.5em;
     --h3-font-size: 1.3em;
     --carousel-caption-font-size: 1.1em;
+
+    --h1-font-family: 'Asmelina Harley';
 }
 
 @font-face {
@@ -62,6 +64,15 @@
     src: url('/contents/fonts/dream_orphans/dream_orphans.ttf') format('ttf');
 }
 
+@font-face {
+    font-family: 'Asmelina Harley';
+    src: url('/contents/fonts/asmelina_harley/asmelinaharley.ttf') format('ttf'),
+        url('/contents/fonts/asmelina_harley/asmelinaharley.woff2') format('woff2'),
+        url('/contents/fonts/asmelina_harley/asmelinaharley.woff') format('woff');
+    font-style: normal;
+    font-weight: normal;
+}
+
 
 /*  ******************************************  Grands écrans   *********************************   */
 @media all and (min-width: 1500px){
@@ -70,6 +81,11 @@
         background-color: var(--noir-site);
         color: var(--blanc-casse);
         font-family: 'ClementePDac ExtraLight', sans-serif;
+    }
+
+    h1 {
+        font-size: var(--h1-font-size);
+        font-family: var(--h1-font-family);
     }
 
     a {
@@ -98,7 +114,7 @@
 
     #logo_and_title {
         height: 100%;
-        width: 25%;
+        width: 40%;
         display: grid;
         grid-template-columns: 30% 70%;
         align-content: center;
