@@ -245,6 +245,7 @@
         background-color: var(--submenu-background-color);
         padding-right: 1%;
         padding-left: 3%;
+        border-radius: 10px;
         font-size: var(--submenu-font-size);
         transition: left 0.5s ease-in-out;
     }
