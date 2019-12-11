@@ -9,15 +9,20 @@
 
     --mainmenu-margin-top: 15vh;
 
-    --main-content-margin-top: calc(var(--hamburgerCross-position-top) + 50px + 1vh);
+    --main-content-margin-top: calc(var(--hamburgerCross-position-top) + 1vh);
 
     --hamburgerCross-position-top: calc((var(--header-height) + var(--mainmenu-height)) + 2vh);
     --hamburgerCross-position-right: 3%;
 
     --submenu-position-top: 20vh;
-    /* --submenu-position-left: 1vh; */
+
     --submenu-height: calc(100vh - (var(--header-height) + var(--footer-height) + var(--mainmenu-height) + 1vh));
     --submenu-width: 20%;
+
+    --gamme_pommes-first-row-height: 5vh;
+    --gamme_pommes-second-row-height: 4vh;
+    --gamme_pommes-third-row-height: 66vh;
+    --gamme_pommes-row-gap: 1vh;
 
     --contact-height: 50vh;
 
@@ -25,14 +30,19 @@
     --blanc-casse: antiquewhite;
     --mainmenu-background-color: rgba(144, 110, 75, 1.0);
     --submenu-background-color: rgba(144, 110, 75, 0.95);
-    --mainmenu-background-color-hover: rgba(21,21,21,0.9);;
+    --sub-submenu-background-color: rgba(144, 110, 75, 0.5);
+    --mainmenu-background-color-hover: rgba(21,21,21,0.9);
+    --red-pointer-hover: rgb(161, 20, 20);
 
     --mainmenu-font-size: 1.3em;
     --submenu-font-size: 1.2em;
-    --h1-font-size: 1.8em;
+    --sub-submenu-font-size: 1.3em;
+    --h1-font-size: 3.2em;
     --h2-font-size: 1.5em;
     --h3-font-size: 1.3em;
     --carousel-caption-font-size: 1.1em;
+
+    --h1-font-family: 'Asmelina Harley';
 }
 
 @font-face {
@@ -54,6 +64,15 @@
     src: url('/contents/fonts/dream_orphans/dream_orphans.ttf') format('ttf');
 }
 
+@font-face {
+    font-family: 'Asmelina Harley';
+    src: url('/contents/fonts/asmelina_harley/asmelinaharley.ttf') format('ttf'),
+        url('/contents/fonts/asmelina_harley/asmelinaharley.woff2') format('woff2'),
+        url('/contents/fonts/asmelina_harley/asmelinaharley.woff') format('woff');
+    font-style: normal;
+    font-weight: normal;
+}
+
 
 /*  ******************************************  Grands écrans   *********************************   */
 @media all and (min-width: 1500px){
@@ -62,6 +81,11 @@
         background-color: var(--noir-site);
         color: var(--blanc-casse);
         font-family: 'ClementePDac ExtraLight', sans-serif;
+    }
+
+    h1 {
+        font-size: var(--h1-font-size);
+        font-family: var(--h1-font-family);
     }
 
     a {
@@ -91,7 +115,7 @@
 
     #logo_and_title {
         height: 100%;
-        width: 25%;
+        width: 40%;
         display: grid;
         grid-template-columns: 30% 70%;
         align-content: center;
@@ -255,7 +279,7 @@
     }
 
     #submenu .pointer:hover {
-        color: rgb(161, 20, 20);
+        color: var(--red-pointer-hover);
     }
 
 
@@ -280,19 +304,21 @@
 
     main article.visible_article {
         display: grid;
-        /* grid-row-gap: 30px; */
         grid-template-columns: 80%;
-        grid-template-rows: 10% 70%;
+        grid-template-rows: 5vh 70vh;
+        row-gap: 2vh;
         -webkit-box-pack: center;
                 justify-content: center;
         height: var(--articles-height);
         opacity: 1;
         text-align: center;
+        overflow: scroll;
     }
 
     main article p {
         text-align: justify;
     }
+
 
     /* QUI SOMMES NOUS */
 
@@ -327,10 +353,99 @@
 
     /* NOTRE GAMME */
 
-    
+    .color-red {
+        color: var(--red-pointer-hover);
+    }
+
+    main #gamme_pommes.visible_article {
+        display: grid;
+        grid-template-columns: 80%;
+        grid-template-rows: var(--gamme_pommes-first-row-height) var(--gamme_pommes-second-row-height) var(--gamme_pommes-third-row-height);
+        row-gap: var(--gamme_pommes-row-gap);
+        -webkit-box-pack: center;
+                justify-content: center;
+        height: var(--articles-height);
+        opacity: 1;
+        text-align: center;
+    }
+
+    #sub_sub_menu ul {
+        width: 100%;
+        display: -webkit-box;
+        display: flex;
+        -webkit-box-pack: space-evenly;
+                justify-content: space-evenly;
+        background-color: var(--sub-submenu-background-color);
+        height: 100%;
+    }
+
+    #sub_sub_menu ul li {
+        list-style-type: none;
+        font-size: var(--sub-submenu-font-size);
+    }
+
+    #sub_sub_menu ul li span {
+        line-height: var(--gamme_pommes-second-row-height);
+    }
+
+    #sub_sub_menu li:hover {
+        color: var(--red-pointer-hover);
+    }
+
+    article .visible_section {
+        overflow: scroll;
+    }
+
+    article .invisible_section {
+        display: none;
+    }
+
+    .drink-item {
+        display: grid;
+        height: 100%;
+        grid-template-columns: 35% 60%;
+        -webkit-column-gap: 5%;
+           -moz-column-gap: 5%;
+                column-gap: 5%;
+        grid-template-rows: 100%;
+    }
+
+    .drink-item img {
+        max-height: 100%;
+        min-height: 100%;
+    }
+
+    .item-text {
+        display: grid;
+        grid-template-columns: 100%;
+        align-content: space-around;
+    }
+
+
+    /* VISITES */
+
+    #visites section {
+        display: grid;
+        grid-template-columns: 100%;
+        row-gap: 8vh;
+        overflow: scroll;
+    }
+
+    #logos-divers {
+        height: 10vh;
+        display: -webkit-box;
+        display: flex;
+        -webkit-box-pack: space-evenly;
+                justify-content: space-evenly;
+    }
+
+    #logos-divers img {
+        max-height: 100%;
+    }
+
     
 
-    /* CONTACT */
+    /* ---------CONTACT--------- */
 
     #contact {
         place-self: center;

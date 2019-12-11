@@ -4,12 +4,14 @@
     --header-img-height : 8vh;
     --carousel-height: 55vh;
     --actualites-height: 30vh;
+    --actualites-item-height: 24vh;
     --menu-height: calc(100vh - (var(--header-height) + var(--footer-height)));
     --footer-height: 10vh;
 
     
     --noir-site: rgba(21,21,21,1.0);
     --body-color: rgb(222, 222,222);
+    --marron-site: rgb(144, 110, 75);
 
     --menu-font-size: 1.5em;
 
@@ -104,10 +106,60 @@
     }
 
     .actualites_item {
+        position: relative;
         align-self: stretch;
+        height: var(--actualites-item-height);
         margin-top: 3vh;
-        /* border: 1px dashed black; */
         text-align: justify;
+        cursor: pointer;
+        border-radius: 15px;
+        transform-style: preserve-3d;
+    }
+
+
+    .front, .back {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        border-radius: 15px;
+        backface-visibility: hidden;
+        background-color: rgb(138, 76, 15);
+        transition: transform 0.4s ease-in-out, background-color 1s ease-in-out;
+        transform-style: preserve-3d;
+    }
+
+    .front {
+        display: grid;
+        grid-template-columns: 90%;
+        justify-content: center;
+        align-content: center;
+        justify-items: center;
+        grid-template-rows: 40% 20%;
+        row-gap: 10%;
+        transform: perspective(600px) rotateX(0deg);
+    }
+
+    .front h2 {
+        transform: perspective(500px) translateZ(50px);
+    }
+
+
+    .back {
+        display: grid;
+        grid-template-columns: 90%;
+        justify-content: center;
+        justify-items: center;
+        align-content: center;
+        transform: perspective(600px) rotateX(180deg);
+    }
+
+    .actualites_item.active .front {
+        transform: perspective(600px) rotateX(-180deg);
+    }
+
+    .actualites_item.active .back {
+        transform: perspective(600px) rotateX(0deg);
+
     }
 
     /*  -------MENU----------   */

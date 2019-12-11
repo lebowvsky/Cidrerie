@@ -37,11 +37,41 @@
         
     </section>
 
-    <section id="actualites">
+    <article id="actualites">
+        <section class="actualites_item">
+            <div class="front">
+                <h2>Titre 1</h2>
+                <p>date</p>
+            </div>
+            <div class="back">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. At illo fugit laudantium neque sed vero tenetur minima aliquam maxime excepturi veritatis eius reprehenderit, optio a aut quasi omnis qui vitae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus pariatur molestiae iste qui illo mollitia culpa fuga unde enim rem laboriosam exercitationem corrupti eaque obcaecati error nobis sapiente, expedita repellendus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, nulla hic ut voluptates qui doloremque maiores veritatis consectetur expedita omnis, et nobis magnam sapiente optio, tempore deleniti. Magni, iure eum.</p>
+            </div>
+        </section>
+        <section class="actualites_item">
+            <div class="front">
+                <h2>Titre 2</h2>
+                <p>date</p>
+            </div>
+            <div class="back">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum quaerat iusto ipsa sint ipsam, autem reiciendis exercitationem nesciunt est consequuntur at in quibusdam eligendi tempora, unde odit quam magni ducimus!</p>
+            </div>
+        </section>
+        <section class="actualites_item">
+            <div class="front">
+                <h2>Titre 3</h2>
+                <p>date</p>
+            </div>
+            <div class="back">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur modi earum veritatis deleniti numquam tenetur a quaerat perferendis velit quas, laboriosam maiores quasi aut inventore repellat soluta natus. Unde, consequuntur. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas officia tenetur veritatis nulla debitis iure laborum laboriosam saepe et ad ea, laudantium repudiandae facere aperiam fuga molestiae magni quidem ex.</p>
+            </div>
+        </section>
+    </article>
+
+    <!-- <section id="actualites">
         <div class="actualites_item"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, dignissimos alias? Eos, illo cumque sunt eum neque maiores id quo autem quisquam adipisci facere laboriosam exercitationem fugit vero quod nihil.</p></div>
         <div class="actualites_item"><p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus facilis sapiente quod nam laudantium! Accusantium, minus commodi fugiat culpa dignissimos cumque reiciendis, labore, doloremque unde quod quibusdam nam. Totam, error! Lorem ipsum dolor sit amet consectetur adipisicing elit. Non mollitia sequi reprehenderit in, inventore placeat sit explicabo, cupiditate vitae omnis facilis nihil beatae provident, nulla officiis eum impedit laudantium sed?</p></div>
         <div class="actualites_item"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, laudantium autem officia saepe eum iusto quod dolorum placeat facilis veniam, quae dignissimos molestiae! Rem nesciunt dolor qui maxime facere explicabo!</p></div>
-    </section>
+    </section> -->
 
     <nav id="menu">
         <ul>
