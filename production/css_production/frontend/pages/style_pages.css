@@ -112,6 +112,10 @@
         justify-items: center;
     }
 
+    header img {
+        height: 100%;
+    }
+
     #logo_and_title {
         height: 100%;
         width: 40%;
@@ -512,13 +516,31 @@
 
 /*  ******************************************  Ecrans Moyens   *********************************   */
 @media all and (min-width: 920px) and (max-width: 1500px){
+    body {
+        background-color: var(--noir-site);
+        color: var(--blanc-casse);
+        font-family: 'ClementePDac ExtraLight', sans-serif;
+    }
 
+    h1 {
+        font-size: var(--h1-font-size);
+        font-family: var(--h1-font-family);
+    }
+
+    a {
+        text-decoration: none;
+        color: var(--blanc-casse);
+    }
+
+    .pointer {
+        cursor: pointer;
+    }
 }
 
 
 
 
 /*  ******************************************  Petits écrans   *********************************   */
-@media and (max-width: 919px){
+/* @media and (max-width: 919px){
     
-}
+} */

@@ -12,8 +12,21 @@
 <body>
 
     <header>
-        <img src="../contents/images/accueil/logo/pomme.png" alt="logo de la cidrerie"/>
+        <img src="../contents/images/accueil/logo/logo_noir.png" alt="logo de la cidrerie"/>
+
+        <div id="hamburger">
+            <span class="line"></span>
+        </div>
     </header>
+
+    <nav id="hamburger_menu">
+        <ul>
+            <li><a href="index.php?action=pommes">Nos pommes</a></li>
+            <li><a href="index.php?action=moutons">Nos moutons</a></li>
+            <li><a href="index.php?action=contact">Contact</a></li>
+            <li><a href="#">Autour de nous</a></li>
+        </ul>
+    </nav>
 
     
     <section id="carousel_photo">

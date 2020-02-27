@@ -6,14 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/4f82ba7452.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="../production/css_production/frontend/pages/style_pages.css">
+    <link rel="stylesheet" href="css/frontend/pages/style_pages_bundle_min.css">
     <?= $css ?>
     <title>Nos pommes</title>
 </head>
 <body>
 
     <header>
-        <img src="#" alt="logo cidrerie" id="main_logo">
+        <img src="../contents/images/accueil/logo/logo_noir.png" alt="logo cidrerie" id="main_logo">
         <div id="logo_and_title">
             <?= $logo ?>
             <?= $title_page ?>
